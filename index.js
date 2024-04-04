@@ -9,7 +9,7 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
     res.cookie('strictCookie', 'someValue', {
         httpOnly: true,
-        sameSite: 'Strict',
+        sameSite: 'Lax',
         path: '/',
         secure: true // Secure should be true if using https
     });
