@@ -18,7 +18,9 @@ app.get('/set-cookie', (req, res) => {
         path: '/',
         secure: true // Secure should be true if using https
     });
+    res.send('cookie setted');
 });
+
 
 app.get('/protected', (req, res) => {
     if (req.cookies.strictCookie === 'someValue') {
